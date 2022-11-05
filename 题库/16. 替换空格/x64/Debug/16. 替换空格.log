@@ -1,0 +1,6 @@
+﻿  test.c
+D:\Anduin_code\force-buckle-1\C语言\AcWing\16. 替换空格\test.c(28,15): warning C4013: “strlen”未定义；假设外部返回 int
+D:\Anduin_code\force-buckle-1\C语言\AcWing\16. 替换空格\test.c(39,24): warning C4013: “malloc”未定义；假设外部返回 int
+D:\Anduin_code\force-buckle-1\C语言\AcWing\16. 替换空格\test.c(39,53): warning C4312: “类型强制转换”: 从“int”转换到更大的“char *”
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+D:\Anduin_code\force-buckle-1\C语言\AcWing\16. 替换空格\x64\Debug\16. 替换空格.exe : fatal error LNK1120: 1 个无法解析的外部命令
