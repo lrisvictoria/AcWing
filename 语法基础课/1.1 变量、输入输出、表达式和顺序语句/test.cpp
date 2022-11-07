@@ -99,3 +99,28 @@ using namespace std;
 #include <cmath> // 数学库
 
 // bool 被当做整数处理
+
+//int main()
+//{
+//	cout << -5 % 2 << endl; // 正负取决于前面的数
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	float a = 5.2;
+//	int b = (int)a;
+//	printf("%d\n", b);
+//
+//	return 0;
+//}
+
+int main()
+{
+	//char c = 'A';
+
+	cout << (char)('A' + 32) << endl;
+
+	return 0;
+}
