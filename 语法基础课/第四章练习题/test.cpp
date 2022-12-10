@@ -73,31 +73,91 @@
 
 // 743. 数组中的行
 
-#include <iostream>
-#include <iomanip>
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    int l;
+//    char ch;
+//
+//    double sum;
+//
+//    cin >> l >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//        {
+//            cin >> q[i][j];
+//            if (i == l) sum += q[i][j];
+//        }
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 12.0 << endl;
+//
+//    return 0;
+//}
 
-using namespace std;
+// 745. 数组的右上半部分
 
-int main()
-{
-    double q[12][12];
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//    char ch;
+//    double sum = 0;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//        {
+//            cin >> q[i][j];
+//            if (i < j) sum += q[i][j];
+//        }
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 66.0 << endl;
+//
+//    return 0;
+//}
 
-    int l;
-    char ch;
+// 747. 数组的左上半部分
 
-    double sum;
-
-    cin >> l >> ch;
-
-    for (int i = 0; i < 12; i++)
-        for (int j = 0; j < 12; j++)
-        {
-            cin >> q[i][j];
-            if (i == l) sum += q[i][j];
-        }
-
-    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
-    else cout << fixed << setprecision(1) << sum / 12.0 << endl;
-
-    return 0;
-}
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    for (int i = 0; i < 11; i++)
+//        for (int j = 0; j < 11 - i; j++)
+//        {
+//            sum += q[i][j];
+//        }
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 66.0 << endl;
+//
+//    return 0;
+//}
