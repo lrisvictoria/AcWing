@@ -280,3 +280,201 @@
 //    return 0;
 //}
 
+// 749. 数组的上方区域
+
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum  = 0 ;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    for (int i = 0; i < 5; i++)
+//        for (int j = i + 1; j <= 10 - i; j++)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') 
+//        cout << sum << endl;
+//    else 
+//        cout << fixed << setprecision(1) << sum / 30.0 << endl;
+//
+//    return 0;
+//}
+
+// 751. 数组的左方区域
+
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum = 0.0;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    // 上半部分和        
+//    for (int i = 1; i <= 5; i++)
+//        for (int j = 0; j < i; j++)
+//            sum += q[i][j];
+//
+//    // 下半部分和
+//    for (int i = 6; i <= 10; i++)
+//        for (int j = 0; j <= 10 - i; j++)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 30.0 << endl;
+//
+//    return 0;
+//}
+
+// 748. 数组的右下半部分
+
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum = 0.0;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    for (int i = 1; i <= 11; i++)
+//        for (int j = 11; j >= 12 - i; j--)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 66.0 << endl;
+//
+//    return 0;
+//}
+
+// 746. 数组的左下半部分
+
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum = 0.0;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    for (int i = 1; i <= 11; i++)
+//        for (int j = 0; j < i; j++)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 66.0 << endl;
+//
+//    return 0;
+//}
+
+// 750. 数组的下方区域
+
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum = 0.0;
+//
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    // 左部分
+//    for (int i = 7; i <= 11; i++)
+//        for (int j = 5; j > 11 - i; j--)
+//            sum += q[i][j];
+//
+//    // 右半部分
+//    for (int i = 7; i <= 11; i++)
+//        for (int j = 6; j < i; j++)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 30.0 << endl;
+//
+//    return 0;
+//}
+
+// 752. 数组的右方区域
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double q[12][12];
+
+    char ch;
+    double sum = 0.0;
+    cin >> ch;
+
+    for (int i = 0; i < 12; i++)
+        for (int j = 0; j < 12; j++)
+            cin >> q[i][j];
+
+    // 上部分
+    for (int i = 1; i <= 5; i++)
+        for (int j = 12 - i; j <= 11; j++)
+            sum += q[i][j];
+
+    // 下半部分
+    for (int i = 6; i <= 10; i++)
+        for (int j = i + 1; j <= 11; j++)
+            sum += q[i][j];
+
+    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+    else cout << fixed << setprecision(1) << sum / 30.0 << endl;
+
+    return 0;
+}
