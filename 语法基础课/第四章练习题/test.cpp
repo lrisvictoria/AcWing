@@ -446,35 +446,148 @@
 
 // 752. 数组的右方区域
 
+//#include <iostream>
+//#include <iomanip>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    double q[12][12];
+//
+//    char ch;
+//    double sum = 0.0;
+//    cin >> ch;
+//
+//    for (int i = 0; i < 12; i++)
+//        for (int j = 0; j < 12; j++)
+//            cin >> q[i][j];
+//
+//    // 上部分
+//    for (int i = 1; i <= 5; i++)
+//        for (int j = 12 - i; j <= 11; j++)
+//            sum += q[i][j];
+//
+//    // 下半部分
+//    for (int i = 6; i <= 10; i++)
+//        for (int j = i + 1; j <= 11; j++)
+//            sum += q[i][j];
+//
+//    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
+//    else cout << fixed << setprecision(1) << sum / 30.0 << endl;
+//
+//    return 0;
+//}
+
+// 753. 平方矩阵 I
+// 曼哈顿距离思想求解
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int n;
+//
+//    // 逗号表达式，前面输入，后面判断输入是否为 0
+//    while (cin >> n, n)
+//    {
+//        for (int i = 1; i <= n; i++)
+//        {
+//            for (int j = 1; j <= n; j++)
+//            {
+//                int up = i, down = n - i + 1, left = j, right = n - j + 1;
+//                cout << min(min(up, down), min(left, right)) << " ";
+//            }
+//            cout << endl;
+//        }
+//        cout << endl;
+//    }
+//
+//    return 0;
+//}
+
+// 754. 平方矩阵 II
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int n;
+//    int q[100][100];
+//
+//    while (cin >> n, n)
+//    {
+//        for (int i = 0; i < n; i++)
+//        {
+//            q[i][i] = 1;
+//
+//            // 处理行元素
+//            for (int j = i + 1, k = 2; j < n; j++, k++) q[i][j] = k;
+//            // 处理列元素
+//            for (int j = i + 1, k = 2; j < n; j++, k++) q[j][i] = k;
+//        }
+//
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int j = 0; j < n; j++)
+//            {
+//                cout << q[i][j] << " ";
+//            }
+//            cout << endl;
+//        }
+//        cout << endl;
+//    }
+//
+//    return 0;
+//}
+
+// 756. 蛇形矩阵
+
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
+const int N = 110;
+
+int q[N][N];
+
+int n, m;
+
 int main()
 {
-    double q[12][12];
+    cin >> n >> m;
 
-    char ch;
-    double sum = 0.0;
-    cin >> ch;
+    int dx[] = { 0, 1, 0, -1 }, dy[] = { 1, 0, -1, 0 };
 
-    for (int i = 0; i < 12; i++)
-        for (int j = 0; j < 12; j++)
-            cin >> q[i][j];
+    int x = 0, y = 0, d = 0;
 
-    // 上部分
-    for (int i = 1; i <= 5; i++)
-        for (int j = 12 - i; j <= 11; j++)
-            sum += q[i][j];
+    for (int i = 1; i <= n * m; i++)
+    {
+        q[x][y] = i;
 
-    // 下半部分
-    for (int i = 6; i <= 10; i++)
-        for (int j = i + 1; j <= 11; j++)
-            sum += q[i][j];
+        int a = x + dx[d], b = y + dy[d];
 
-    if (ch == 'S') cout << fixed << setprecision(1) << sum << endl;
-    else cout << fixed << setprecision(1) << sum / 30.0 << endl;
+        if (a < 0 || a >= n || b < 0 || b >= m || q[a][b])
+        {
+            d = (d + 1) % 4;
+            a = x + dx[d], b = y + dy[d];
+        }
+
+        x = a, y = b;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout << q[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
