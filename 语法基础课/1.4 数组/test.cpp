@@ -41,16 +41,65 @@ using namespace std;
 * 双向迭代器应指向正确定义了swap的类型。
 */
 
+//int main()
+//{
+//	int q[] = { 1, 2, 3, 4, 5 };
+//
+//	// 三步翻转法实例
+//	reverse(q, q + 2); // [0, 1]
+//	reverse(q + 2, q + 5); // [2, 4]
+//	reverse(q, q + 5); // [0, 4]
+//
+//	for (int i = 0; i < 5; i++) cout << q[i] << " ";
+//
+//	return 0;
+//}
+
+// 高精度二次幂
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//const int N = 3010;
+//
+//int main()
+//{
+//	int q[N] = { 1 };
+//
+//	int n;
+//	cin >> n;
+//
+//	int m = 1; // 位数
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		int t = 0; // 进位
+//		// 当前位数为 1
+//		for (int j = 0; j < m; j++)
+//		{
+//			t += 2 * q[j];
+//			q[j] = t % 10;
+//			t /= 10;
+//		}
+//		// 如果满足进位条件，则将下一位调整为 1 ，并且将 m 自增
+//		if (t) q[m++] = 1;
+//	}
+//
+//	for (int i = m - 1; i >= 0; i--) cout << q[i] << " ";
+//
+//	return 0;
+//}
+
+#include <iostream>
+
+using namespace std;
+
 int main()
 {
-	int q[] = { 1, 2, 3, 4, 5 };
+	int a[1][1][1][1][1][1][1][1][1] = { 0 };
 
-	// 三步翻转法实例
-	reverse(q, q + 2); // [0, 1]
-	reverse(q + 2, q + 5); // [2, 4]
-	reverse(q, q + 5); // [0, 4]
-
-	for (int i = 0; i < 5; i++) cout << q[i] << " ";
+	cout << a[0][0][0][0][0][0][0][0][0] << endl;
 
 	return 0;
 }
