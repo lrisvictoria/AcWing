@@ -120,47 +120,47 @@ using namespace std;
 //	string s4(10, 'c'); // 将十个字节内容为 cc cc cc cc cc
 //}
 
-int main()
-{
-	string s = "hello world";
-
-	// 当做字符数组处理
-	//for (int i = 0; i < s.size(); i++) cout << s[i] << endl;
-
-	// 范围 for 循环
-	// for (char c : s) cout << c << endl;
-	// for (auto c : s) cout << c << endl;
-
-	// auto 为猜测值，当数据类型几乎唯一时，可以使用
-
-	// 错误示范
-	// 被解析为字符数组
-	/*auto name = "anduin";
-
-	cout << name.size() << endl;*/
-
-	// c 相当于
-	/*for (int i = 0; i < s.size(); i++)
-	{
-		char c = s[i];
-		cout << c << endl;
-	}*/
-
-	// 修改 c 并不能改变值
-
-	// 加上引用 & 就可以了
-
-	char s1[] = "anduinanduin";
-	int cnt = 0;
-
-	for (auto& c : s)
-	{
-		c = s1[cnt++];
-		cout << c << endl;
-	}
-
-	return 0;
-}
+//int main()
+//{
+//	string s = "hello world";
+//
+//	// 当做字符数组处理
+//	//for (int i = 0; i < s.size(); i++) cout << s[i] << endl;
+//
+//	// 范围 for 循环
+//	// for (char c : s) cout << c << endl;
+//	// for (auto c : s) cout << c << endl;
+//
+//	// auto 为猜测值，当数据类型几乎唯一时，可以使用
+//
+//	// 错误示范
+//	// 被解析为字符数组
+//	/*auto name = "anduin";
+//
+//	cout << name.size() << endl;*/
+//
+//	// c 相当于
+//	/*for (int i = 0; i < s.size(); i++)
+//	{
+//		char c = s[i];
+//		cout << c << endl;
+//	}*/
+//
+//	// 修改 c 并不能改变值
+//
+//	// 加上引用 & 就可以了
+//
+//	char s1[] = "anduinanduin";
+//	int cnt = 0;
+//
+//	for (auto& c : s)
+//	{
+//		c = s1[cnt++];
+//		cout << c << endl;
+//	}
+//
+//	return 0;
+//}
 
 //int main()
 //{
@@ -174,3 +174,27 @@ int main()
 //		 
 //	return 0;
 //}
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string s = "i like changzhou";
+
+	int i = 2;
+
+	/*cout << s.substr(1, 3) << endl;
+
+	cout << s.substr(1, 1) << endl;
+
+	cout << s.substr(0) << endl;
+
+	cout << s.substr(0, 20) << endl;*/
+
+	cout << s.substr(0, i + 1) + s.substr(i + 1) << endl;
+
+	return 0;
+}
