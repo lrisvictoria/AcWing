@@ -30,6 +30,58 @@
 3 4 5 3 4 2
 */
 
+//#include <iostream>
+//
+//using namespace std;
+//
+//const int N = 100010;
+//
+//int n, m;
+//int a[N], b[N];
+//
+//void insert(int l, int r, int c)
+//{
+//    b[l] += c;
+//    b[r + 1] -= c;
+//}
+//
+//int main()
+//{
+//    cin >> n >> m;
+//
+//    for (int i = 1; i <= n; i++) {
+//        cin >> a[i];
+//    }
+//
+//    for (int i = 1; i <= n; i++) {
+//        insert(i, i, a[i]);
+//    }
+//
+//    /*for (int i = 1; i <= n; i++) {
+//        b[i] = a[i] - a[i - 1];
+//    }*/
+//
+//    while (m--) {
+//        int l, r, c;
+//        cin >> l >> r >> c;
+//
+//        insert(l, r, c);
+//    }
+//
+//    // 求一下元素数组的和
+//    for (int i = 1; i <= n; i++) {
+//        b[i] += b[i - 1];
+//    }
+//
+//    for (int i = 1; i <= n; i++) {
+//        cout << b[i] << " ";
+//    }
+//
+//    return 0;
+//}
+
+// 构造一维差分
+
 #include <iostream>
 
 using namespace std;
@@ -39,12 +91,6 @@ const int N = 100010;
 int n, m;
 int a[N], b[N];
 
-void insert(int l, int r, int c)
-{
-    b[l] += c;
-    b[r + 1] -= c;
-}
-
 int main()
 {
     cin >> n >> m;
@@ -53,28 +99,28 @@ int main()
         cin >> a[i];
     }
 
+    // 构造差分数组
     for (int i = 1; i <= n; i++) {
-        insert(i, i, a[i]);
-    }
-
-    /*for (int i = 1; i <= n; i++) {
         b[i] = a[i] - a[i - 1];
-    }*/
+    }
 
     while (m--) {
         int l, r, c;
         cin >> l >> r >> c;
 
-        insert(l, r, c);
+        b[l] += c;
+        b[r + 1] -= c;
     }
 
-    // 求一下元素数组的和
+    // 前缀和求到 a 数组中
     for (int i = 1; i <= n; i++) {
-        b[i] += b[i - 1];
+        a[i] = b[i] + a[i - 1];
+
+        //b[i] += b[i - 1];
     }
 
     for (int i = 1; i <= n; i++) {
-        cout << b[i] << " ";
+        cout << a[i] << " ";
     }
 
     return 0;
