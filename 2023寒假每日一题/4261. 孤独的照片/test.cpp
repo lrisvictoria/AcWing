@@ -21,11 +21,14 @@ Farmer John ×î½ü¹ºÈëÁË N Í·ÐÂµÄÄÌÅ££¬Ã¿Í·ÄÌÅ£µÄÆ·ÖÖÊÇ¸üÈüÅ££¨Guernsey£©»òºÉË¹Ì¹Å
 
 Êý¾Ý·¶Î§
 3¡ÜN¡Ü5¡Á105
+
 ÊäÈëÑùÀý£º
 5
 GHGHG
+
 Êä³öÑùÀý£º
 3
+
 ÑùÀý½âÊÍ
 Õâ¸öÀý×ÓÖÐµÄÃ¿Ò»¸ö³¤Îª 3 µÄ×Ó´®¾ùÇ¡ºÃ°üº¬Ò»Í·¸üÈüÅ£»òºÉË¹Ì¹Å£¡ª¡ªËùÒÔÕâÐ©×Ó´®±íÊ¾¹Â¶ÀµÄÕÕÆ¬£¬²¢»á±» Farmer John ÈÓµô¡£
 
