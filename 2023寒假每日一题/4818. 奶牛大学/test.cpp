@@ -60,12 +60,14 @@ int main()
     // 对数组进行排序
     sort(a, a + n);
 
-    // tuition - 总学费
-    // maxnum  - 奶牛原意支付的最大金额
+    // tuition - 最大学费
+    // maxnum  - 满足最大学费时，奶牛原意支付的金额
     // cnt     - 当前能付得起学费的奶牛数
+    // money   - 当前位置的学费
     ll tuition = 0, maxnum = 0;
     for (ll i = n - 1, cnt = 1; i >= 0; i--, cnt++) {
         ll money = cnt * a[i];
+        // 当前位置的总学费大于等于最大学费，则更新
         if (money >= tuition) {
             maxnum = a[i];
             tuition = money;
