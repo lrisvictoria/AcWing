@@ -39,6 +39,7 @@ no
 using namespace std;
 
 const int N = 100010;
+
 int dp[N], n, m, x;
 
 int main()
